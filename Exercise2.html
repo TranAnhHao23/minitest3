@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+
+</body>
+<script>
+    function findA(){
+
+        let arrLength = +prompt("Nhập số lượng phần tử")
+        let arr2 = [];
+        let count = 0;
+
+        for (let i = 0; i < arrLength; i++) {
+            arr2[i] = +prompt("Nhập phần tử thứ " + (i + 1))
+        }
+        let input = prompt("Nhập giá trị cần tìm kiếm")
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr2[i] === input){
+                count++
+            }
+        }
+        console.log(input)
+        if (count === 0){
+            document.write("Mảng không chứa giá trị " + input)
+        } else {
+            document.write("Mảng chứa " + count + " phần tử giống giá trị " + input + "<br>")
+        }
+        if (isNaN(+input) === true){
+            document.write("Giá trị này là chữ, ký tự tùy đó" + "<br>")
+        } else {
+            document.write("Giá trị này là số")
+        }
+    }
+    findA()
+
+</script>
+</html>

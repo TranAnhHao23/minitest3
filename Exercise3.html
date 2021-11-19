@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    function calSumPrime() {
+        let arrLength = +prompt("Nhập số lượng phần tử")
+        let arr3 = [];
+        let sum = 0;
+
+        for (let i = 0; i < arrLength; i++) {
+            arr3[i] = +prompt("Nhập phần tử thứ " + (i + 1))
+        }
+        console.log(arr3)
+        for (let i = 0; i < arr3.length; i++) {
+            if (isPrime(arr3[i]) && arr3[i] < 200) {
+                sum = sum + arr3[i]
+            }
+        }
+        document.write("Tổng của các số nguyên tố nhỏ hơn 200 trong mảng = " + sum)
+    }
+
+    function isPrime(number) {
+        if (number < 3) {
+            return false
+        } else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false
+                }
+            }
+            return true
+        }
+    }
+
+    calSumPrime()
+
+
+</script>
+</html>

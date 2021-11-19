@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4</title>
+</head>
+<body>
+<h1 id="result1"></h1>
+<i ><p id="result2"> </p></i>
+<b ><p id="result3"> </p></b>
+</body>
+<script>
+    function checkNumber() {
+        let arrLength = +prompt("Nhập số lượng phần tử")
+        let arr4 = [];
+        let countDiv3 = 0;
+        let countDiv5 = 0;
+        let countDiv0 = 0;
+
+        for (let i = 0; i < arrLength; i++) {
+            arr4[i] = +prompt("Nhập phần tử thứ " + (i + 1))
+        }
+        console.log(arr4)
+
+        for (let i = 0; i < arr4.length; i++) {
+            if (arr4[i] % 15 === 0) {
+                countDiv3++
+                countDiv5++
+            } else if (arr4[i] % 3 === 0) {
+                countDiv3++
+            } else if (arr4[i] % 5 === 0) {
+                countDiv5++
+            } else {
+                countDiv0++
+            }
+
+        }
+        if (countDiv0 > countDiv5 && countDiv0 > countDiv3) {
+            document.getElementById("result3").innerHTML = "CodeGym"
+        } else if (countDiv5 > countDiv3) {
+            document.getElementById("result2").innerHTML = "HelloWorld"
+        } else {
+            document.getElementById("result1").innerHTML = "C1021H1"
+        }
+    }
+
+    checkNumber();
+</script>
+</html>

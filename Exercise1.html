@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    function checkDivideThree() {
+        let arrLength = +prompt("Nhập số lượng phần tử")
+        let arr1 = [];
+        let count = 1;
+        for (let i = 0; i < arrLength; i++) {
+            arr1[i] = +prompt("Nhập phần tử thứ " + (i + 1))
+        }
+        console.log(arr1)
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] % 3 == 0) {
+                document.write("Số thứ " + count + " trong mảng chia hết cho 3 là " + arr1[i] + " nằm ở index thứ " + i + "<br>")
+                count++
+            }
+        }
+        if (count == 1) {
+            document.write("-1")
+        } else {
+            document.write("Tổng số lượng phần tử chia hết cho 3 là " + (count-1))
+        }
+    }
+
+    checkDivideThree()
+
+</script>
+</html>
