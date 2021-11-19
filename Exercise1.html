@@ -18,12 +18,12 @@
         }
         console.log(arr1)
         for (let i = 0; i < arr1.length; i++) {
-            if (arr1[i] % 3 == 0) {
+            if (arr1[i] % 3 === 0) {
                 document.write("Số thứ " + count + " trong mảng chia hết cho 3 là " + arr1[i] + " nằm ở index thứ " + i + "<br>")
                 count++
             }
         }
-        if (count == 1) {
+        if (count === 1) {
             document.write("-1")
         } else {
             document.write("Tổng số lượng phần tử chia hết cho 3 là " + (count-1))
